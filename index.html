@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>videojs-contrib-hls embed</title>
+  
+  <!--
+
+  Uses the latest versions of video.js and videojs-http-streaming.
+
+  To use specific versions, please change the URLs to the form:
+
+  <link href="https://unpkg.com/video.js@6.7.1/dist/video-js.css" rel="stylesheet">
+  <script src="https://unpkg.com/video.js@6.7.1/dist/video.js"></script>
+  <script src="https://unpkg.com/@videojs/http-streaming@0.9.0/dist/videojs-http-streaming.js"></script>
+
+  -->
+
+  <link href="https://unpkg.com/video.js/dist/video-js.css" rel="stylesheet">
+  
+  <link href="https://unpkg.com/@videojs/themes@1/dist/sea/index.css" rel="stylesheet">
+</head>
+<body>
+  <h1>Video.js Example Embed</h1>
+
+  <video-js
+    id="my_video_1"
+    class="video-js vjs-theme-sea vjs-16-9"
+    controls
+    preload="auto"
+    height="720"
+    poster="https://cdn.bitmovin.com/content/assets/sintel/poster.png"
+  >
+    <source src="https://cdn.bitmovin.com/content/assets/sintel/hls/playlist.m3u8" type="application/x-mpegURL">
+  </video-js>
+  
+  <script src="https://unpkg.com/video.js/dist/video.js"></script>
+  <script src="https://unpkg.com/@videojs/http-streaming/dist/videojs-http-streaming.js"></script>
+  
+  <script>
+    var player = videojs('my_video_1');
+  </script>
+  
+</body>
+</html>
