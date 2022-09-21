@@ -2126,19 +2126,30 @@
 		box-shadow:inset 0px 0px 0px 1px #000;
 	}
 
+	body.display_sw nav.main .cur {
+		color: #fff;
+	}
+
+
 	body.display_ws nav.main li button {
 		color: #fff;
 		-webkit-box-shadow:inset 0px 0px 0px 2px #fff;
 		-moz-box-shadow:inset 0px 0px 0px 2px #fff;
 		box-shadow:inset 0px 0px 0px 2px #fff;
 	}
-
+	body.display_ws nav.main .cur {
+		color: #000;
+	}
 
 	body.display_ws nav.main li .list-ico img {
 		filter: invert();
 	}
-
-
+	body.display_ws nav.main li .cur .list-ico img {
+		filter: invert(0%);
+	}
+	body.display_sw nav.main li .cur .list-ico img {
+		filter: invert();
+	}
 
 	.intro-card {
 		/* background-color: #F3F2F0; */
