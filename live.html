@@ -9,6 +9,14 @@
 
   <!-- Video.js default CSS cdn -->
   <link href="https://vjs.zencdn.net/7.20.3/video-js.css" rel="stylesheet" />
+  <!-- Video.js base CSS -->
+  <!-- <link href="https://unpkg.com/video.js@7/dist/video-js.min.css" rel="stylesheet"> -->
+  <!-- <link href="https://unpkg.com/@videojs/themes@1/dist/city/index.css" rel="stylesheet"> -->
+
+  <!-- Fantasy -->
+  <link href="https://unpkg.com/@videojs/themes@1/dist/sea/index.css" rel="stylesheet">
+
+
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Karla:400,400i,700,700i" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
@@ -23,8 +31,8 @@
     <div class="container_left">
 
       <header class="logo">
-        <a href="#" class="navicon">zur Navigation</a>
-        <a href="/">
+        <a href="https://www.grenzenlos-kultur.de/" class="navicon">zur Navigation</a>
+        <a href="https://www.grenzenlos-kultur.de/">
           <img src="/img/logo.png" alt="Alles muss raus!">
         </a>
 
@@ -37,8 +45,12 @@
           <h3>Politik der Solidarität, Fürsorge, und Präsenz</h3>
         </div>
         <ul>
-          <li><button class="audio original activeStream"><span class="list-ico ico-hp"><img src="/img/ico-headphones.svg" alt=""></span>Original</button>
+          <li><button class="dgs-link"><span class="list-ico ico-dgs"><img src="/img/ico-dgs.svg"
+            alt=""></span>DGS</button></li>
+            <li><button class="audioAll hidden"><span class="list-ico ico-hp"><img src="/img/ico-headphones.svg" alt=""></span>AUDIO</button></li>
+          <li><button class="audio original cur"><span class="list-ico ico-hp"><img src="/img/ico-headphones.svg" alt=""></span>Original</button>
           </li>
+        
           <li><button class="audio english"><span class="list-ico ico-hp"><img src="/img/ico-headphones.svg" alt=""></span>English</button>
           </li>
           <li><button class="audio deutsch"><span class="list-ico ico-hp"><img src="/img/ico-headphones.svg" alt=""></span>Deutsch</button>
@@ -46,10 +58,9 @@
           <li><button class="audio leicht"><span class="list-ico ico-hp"><img src="/img/ico-headphones.svg" alt=""></span>Leichte
               Sprache</button></li>
           <li><button class="audio polski"><span class="list-ico ico-hp"><img src="/img/ico-headphones.svg" alt=""></span>Polski</button></li>
-          <li><button class="audioAll hidden"><span class="list-ico ico-hp"><img src="/img/ico-headphones.svg" alt=""></span>AUDIO</button></li>
-          <hr class="audio">
-          <li><button class="dgs-link"><span class="list-ico ico-dgs"><img src="/img/ico-dgs.svg"
-                  alt=""></span>DGS</button></li>
+          
+          
+          
 
 
 
@@ -86,7 +97,7 @@
       </nav>
 
       <div class="">
-        <video id="my-video" class="video-js vjs-16-9" controls preload="auto" autoplay muted
+        <video id="my-video" class="video-js vjs-16-9 vjs-big-play-button" controls preload
           poster="https://www.grenzenlos-kultur.de/?rex_media_type=photos&rex_media_file=slideshow_300dpi-2022.jpg"
           data-setup="{}">
           <source src="https://nimble1.zebrastudio.live/out/mainz/playlist.m3u8"

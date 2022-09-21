@@ -179,8 +179,8 @@
 		color: #fff;
 	}
 	body.display_sw button.cur {
-		background: #000 !important;
 		color: #fff;
+		background: #000 !important;
 	}
 
 	body.display_ws a.cur {
@@ -1921,9 +1921,7 @@
 		padding-top: 10px;
 	}
 
-	.ico-clock {
-
-	}
+	
 	body.display_sw
 
 	.agenda {
@@ -2016,9 +2014,29 @@
 		padding-bottom: 40px;
 	}
 
+	.vjs-menu-button-popup .vjs-menu {
+		width: 20em;
+		left: -13em;
+	}
+
+	.vjs-menu-button-popup .vjs-menu .vjs-menu-content {
+		max-height: fit-content;
+	}
+
+
+	.vjs-menu li {
+		line-height: 2em;
+		text-transform: capitalize;
+
+	}
 
 	.vjs-menu-item-text {
 		font-size: x-large;
+	}
+
+	.vjs-menu-item-text::first-letter {
+		content-visibility: hidden;
+		
 	}
 
 	.list-ico img {
@@ -2118,4 +2136,15 @@
 
 	body.display_ws nav.main li .list-ico img {
 		filter: invert();
+	}
+
+
+
+	.intro-card {
+		/* background-color: #F3F2F0; */
+		height: 200px;
+		
+	}
+	.intro-card h2 {
+		padding: 82px;
 	}

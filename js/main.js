@@ -8,13 +8,21 @@ const audioLink = 'https://nimble1.zebrastudio.live/out/mainz/playlist.m3u8'
 const dgsLink = 'https://nimble1.zebrastudio.live/DGS/mainz/playlist.m3u8'
 
 
-console.log('audioTracks', audioTracks);
+
 
 
 var dgs = document.getElementsByClassName('dgs-link');
 var audioChoice = document.getElementsByClassName('audio');
-var audioAll = document.getElementsByClassName('audioAll');
+
 var activeStream = document.getElementsByClassName('activeStream');
+
+
+
+
+
+
+
+
 
 function dgsVideo(event) {
   
@@ -25,9 +33,7 @@ function dgsVideo(event) {
     audioChoice[2].classList.toggle("hidden");
     audioChoice[3].classList.toggle("hidden");
     audioChoice[4].classList.toggle("hidden");
-    audioChoice[5].classList.toggle("hidden");
     audioAll[0].classList.toggle("hidden");
-    // activeStream = dgs;
 
 }
 
@@ -40,32 +46,71 @@ function allAudio(event) {
   audioChoice[2].classList.toggle("hidden");
   audioChoice[3].classList.toggle("hidden");
   audioChoice[4].classList.toggle("hidden");
-  audioChoice[5].classList.toggle("hidden");
   audioAll[0].classList.toggle("hidden");
-  // activeStream = dgs;
+
 
 }
+
+
+
 
 function originalAudio(event) {
-  // myPlayer.player().src('https://d2zihajmogu5jn.cloudfront.net/bipbop-advanced/bipbop_16x9_variant.m3u8');
+
   audioTracks[3].enabled = true;
+  originalBtn[0].classList.add("cur");
+  englishBtn[0].classList.remove("cur");
+  deutschBtn[0].classList.remove("cur");
+  leichteBtn[0].classList.remove("cur");
+  polskiBtn[0].classList.remove("cur");
 }
+
 function englishAudio(event) {
-  // myPlayer.player().src('https://d2zihajmogu5jn.cloudfront.net/bipbop-advanced/bipbop_16x9_variant.m3u8');
+
   audioTracks[1].enabled = true;
+  originalBtn[0].classList.remove("cur");
+  englishBtn[0].classList.add("cur");
+  deutschBtn[0].classList.remove("cur");
+  leichteBtn[0].classList.remove("cur");
+  polskiBtn[0].classList.remove("cur");
 }
+
 function deutschAudio(event) {
+
   audioTracks[0].enabled = true;
+  originalBtn[0].classList.remove("cur");
+  englishBtn[0].classList.remove("cur");
+  deutschBtn[0].classList.add("cur");
+  leichteBtn[0].classList.remove("cur");
+  polskiBtn[0].classList.remove("cur");
 }
+
 function leichteAudio(event) {
+
   audioTracks[2].enabled = true;
+  originalBtn[0].classList.remove("cur");
+  englishBtn[0].classList.remove("cur");
+  deutschBtn[0].classList.remove("cur");
+  leichteBtn[0].classList.add("cur");
+  polskiBtn[0].classList.remove("cur");
 }
+
 function polskiAudio(event) {
+
   audioTracks[4].enabled = true;
+  originalBtn[0].classList.remove("cur");
+  englishBtn[0].classList.remove("cur");
+  deutschBtn[0].classList.remove("cur");
+  leichteBtn[0].classList.remove("cur");
+  polskiBtn[0].classList.add("cur");
 }
 
+var audioAll = document.getElementsByClassName('audioAll');
 
-
+var originalBtn = document.getElementsByClassName('original');
+var englishBtn = document.getElementsByClassName('english');
+var deutschBtn = document.getElementsByClassName('deutsch');
+var leichteBtn = document.getElementsByClassName('leicht');
+var polskiBtn = document.getElementsByClassName('polski');
 
 
 const originalAudioBtn = document.querySelector('.original');
@@ -77,6 +122,7 @@ const allAudioBtn = document.querySelector('.audioAll');
 
 
 const dgsVideoBtn = document.querySelector('.dgs-link');
+
 
 
 originalAudioBtn.addEventListener('click', originalAudio);
