@@ -239,7 +239,7 @@
 	}
 
 	.logo {
-		background: #000;
+		/* background: #000; */
 		height: 216px;
 		width: 100%;
 		display: inline-block;
@@ -927,7 +927,7 @@
 
 	td {
 		display: block;
-		vertical-align: top;
+		/* vertical-align: top; */
 	}
 
 	td.title {
@@ -1091,6 +1091,17 @@
 		text-decoration: none !important;
 	}
 
+
+	nav.agenda-days ul { 
+		list-style: none;
+		padding: 0;
+		margin: 10px 0 5px 50px;
+	}
+	.elements-inside {
+		margin-left: 50px;
+	}
+
+
 	/* ==========================================================================
 	Media Queries
 	========================================================================== */
@@ -1235,7 +1246,7 @@
 		}
 		
 		.accessible_info {
-			margin: -7px 0 10px 0;
+			margin: 100px 0 10px 0;
 		}
 		
 		/* --------- Slider ----------*/
@@ -1368,6 +1379,13 @@
 		div.container_play h2 {
 			width: 400px;
 		}
+		nav.agenda-days ul { 
+			margin: 10px 0 5px 0;
+		}
+		.elements-inside {
+			margin-left: 00px;
+		}
+	
 		
 	}
 
@@ -1515,6 +1533,9 @@
 			margin-bottom: 25px;
 			width: 100%;
 		}
+		/* nav.agenda-days ul { 
+			padding: 0;
+		} */
 		
 		
 	}
@@ -1580,7 +1601,7 @@
 		
 		.accessible_info {
 			width: calc(100% - 20px);
-			margin: -12px 0 20px 0 !important;
+			margin: 70px 0 20px 0 !important;
 		}
 		
 		/* -----------   Home Slider  ---------*/
@@ -1855,19 +1876,7 @@
 			padding: 0 0 18px 0;
 	}
 
-	@media only screen and (min-width: 750px) {
-
-		img.partner {
-			display: unset;
-			vertical-align: middle;
-			margin: 0 50px 0 0;
-			padding: 20px 0;
-		}
 	
-		p.partner {
-			text-align: left;
-		}
-	}
 
 
 
@@ -1911,14 +1920,13 @@
 	.agenda-header {
 		height: 50px;
 		background-color: #8A9EA9;
-		/* vertical-align: middle; */
 		font-weight: 700;
-		/* padding-top: px; */
 		
 	}
 	.elements-inside {
 		/* margin: 25px auto; */
 		padding-top: 10px;
+		
 	}
 
 	
@@ -1939,14 +1947,10 @@
 		display: inline-block;
 		/* width: 100%; */
 		margin: 0;
-		padding: 0;
+		/* padding: 0; */
 	}
 
-	nav.agenda-days ul { 
-		list-style: none;
-		padding: 0;
-		margin: 10px 0 5px 0;
-	}
+
 
 	nav.agenda-days li {
 		display: inline-block;
@@ -2159,3 +2163,27 @@
 	.intro-card h2 {
 		padding: 82px;
 	}
+
+	body.display_ws .agenda img {
+		filter: invert();
+	
+	}
+
+	.vjs-big-play-centered .vjs-big-play-button{
+		color: red;
+	}
+	
+	.vjs-big-play-centered .vjs-big-play-button:hover{
+		color: white;
+	}
+
+	.video-js .vjs-big-play-button {
+		border: 0.06666em solid white;
+		border-radius: 1em;
+	}
+
+	.video-js:hover .vjs-big-play-button {
+		border: 0.06666em solid red;
+
+	}
+
