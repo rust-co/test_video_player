@@ -9,6 +9,14 @@
 
   <!-- Video.js default CSS cdn -->
   <link href="https://vjs.zencdn.net/7.20.3/video-js.css" rel="stylesheet" />
+  <!-- Video.js base CSS -->
+  <!-- <link href="https://unpkg.com/video.js@7/dist/video-js.min.css" rel="stylesheet"> -->
+  <!-- <link href="https://unpkg.com/@videojs/themes@1/dist/city/index.css" rel="stylesheet"> -->
+
+  <!-- Fantasy -->
+  <link href="https://unpkg.com/@videojs/themes@1/dist/sea/index.css" rel="stylesheet">
+
+
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Karla:400,400i,700,700i" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
@@ -36,21 +44,22 @@
           <h2>SYMPOSIUM</h2>
           <h3>Politik der Solidarität, Fürsorge, und Präsenz</h3>
         </div>
-        <ul class="hidden">
-          <li><button class="audio original cur"><span class="list-ico ico-hp"><img src="/img/ico-headphones.svg" alt=""></span>Original</button>
-          </li>
-        
-          <li><button class="audio english"><span class="list-ico ico-hp"><img src="/img/ico-headphones.svg" alt=""></span>English</button>
-          </li>
-          <li><button class="audio deutsch"><span class="list-ico ico-hp"><img src="/img/ico-headphones.svg" alt=""></span>Deutsch</button>
-          </li>
-          <li><button class="audio leicht"><span class="list-ico ico-hp"><img src="/img/ico-headphones.svg" alt=""></span>Leichte
-              Sprache</button></li>
-          <li><button class="audio polski"><span class="list-ico ico-hp"><img src="/img/ico-headphones.svg" alt=""></span>Polski</button></li>
-          <li><button class="audioAll hidden"><span class="list-ico ico-hp"><img src="/img/ico-headphones.svg" alt=""></span>AUDIO</button></li>
-          
+        <ul>
           <li><button class="dgs-link"><span class="list-ico ico-dgs"><img src="/img/ico-dgs.svg"
             alt=""></span>DGS</button></li>
+            <li><button class="audioAll"><span class="list-ico ico-hp"><img src="/img/ico-headphones.svg" alt=""></span>AUDIO</button></li>
+          <li><button class="audio original cur hidden"><span class="list-ico ico-hp"><img src="/img/ico-headphones.svg" alt=""></span>Original</button>
+          </li>
+        
+          <li><button class="audio english hidden"><span class="list-ico ico-hp"><img src="/img/ico-headphones.svg" alt=""></span>English</button>
+          </li>
+          <li><button class="audio deutsch hidden"><span class="list-ico ico-hp"><img src="/img/ico-headphones.svg" alt=""></span>Deutsch</button>
+          </li>
+          <li><button class="audio leicht hidden"><span class="list-ico ico-hp"><img src="/img/ico-headphones.svg" alt=""></span>Leichte
+              Sprache</button></li>
+          <li><button class="audio polski hidden"><span class="list-ico ico-hp"><img src="/img/ico-headphones.svg" alt=""></span>Polski</button></li>
+          
+          
           
 
 
@@ -86,17 +95,146 @@
 
         </div>
       </nav>
-
+      <iframe id="introVideo" width="916px" height="516px" src="https://www.youtube.com/embed/gyhqSh2fRCU?controls=0"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
       <div class="">
-        <div class="intro-card">
-          <h2>The SYMPOSIUM will be streamed live here on 29.09. and 30.09.!</h2>
+        
+        
+          
+        <video id="my-video" class="video-js vjs-16-9 vjs-big-play-centered hidden" controls preload
+          poster="https://www.grenzenlos-kultur.de/?rex_media_type=photos&rex_media_file=slideshow_300dpi-2022.jpg"
+          data-setup="{}">
+          <!-- <source src="https://redirector.zebrastudio.live/redirector.php?u=/abr/edge/playlist.m3u8"
+            type="application/x-mpegURL"> -->
+            <source src="https://edge1.zebrastudio.live/out/mainz/playlist.m3u8"
+            type="application/x-mpegURL">
+          <p class="vjs-no-js">
+            To view this video please enable JavaScript, and consider upgrading to a
+            web browser that
+            <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+          </p>
+        </video>
 
 
       </div>
+      <div id="agenda" class="agenda hidden">
+        <div class="agenda-header">
+          <div class="elements-inside">
+            <img src="/img/ico-clock.svg" alt="">
+            Agenda
+          </div>
+        </div>
+        <nav class="agenda-days">
 
+          <ul>
+            <li class="day1"><button class="cur">29.09.2022.</button></li>
+            <li class="day2"><button>30.09.2022.</button></li>
+          </ul>
+        </nav>
+        <div class="agenda-wrapper">
 
+          <div class="day-content day1-content">
+            <div class="agenda-content agenda-1">
+              <div class="left-content">
+                <h2>Body-to-Body with Marilyn / Körper-zu-Körper mit Marilyn</h2>
+                <h3>
+                  Maja Kowalczyk, Aleksandra Skotarek
+                  & Kollegen (Polen)
+                </h3>
+                Video-Lecture Performance
+              </div>
+            </div>
+            <hr>
+            <div class="agenda-content agenda-2">
+              <div class="left-content">
+                <h2>Something very special / Etwas ganz besonderes</h2>
+                <h3>
+                  Dalibor Šandor (Serbien)
+                </h3>
+                Lecture Performance
+              </div>
+            
+            </div>
+            <hr>
+            <div class="agenda-content agenda-3">
+              <div class="left-content">
+                <h2>Down, by Law</h2>
+                <h3>
+                  Mila Čuljak (Kroatien)
+                </h3>
+                Audio Drama
+              </div>
+             
+            </div>
+            <hr>
+            <div class="agenda-content agenda-4">
+              <div class="left-content">
+                <h2>Artivism and disability led work / Artivismus und behindertengerechte Arbeit</h2>
+                <h3>
+                  Mila Čuljak (Kroatien), Aleksandra Skotarek (Polen), Kira Shmyreva (Russland/Deutschland), Steven
+                  Solbrig (Deutschland), Katarzyna Żeglicka (Polen), Justyna Wielgus (Polen) Moderation: Milesa
+                  Milinković (Serbien)
+                </h3>
+                Podiumsdiskussion
+              </div>
+              
+            </div>
+          </div>
+
+          <div class="day-content day2-content hidden">
+            <div class="agenda-content agenda-1">
+              <div class="left-content">
+                <h2>Body-to-Body with Marilyn / Körper-zu-Körper mit Marilyn</h2>
+                <h3>
+                  Maja Kowalczyk, Aleksandra Skotarek
+                  & Kollegen (Polen)
+                </h3>
+                Video-Lecture Performance
+              </div>
+ 
+            </div>
+            <hr>
+            <div class="agenda-content agenda-2">
+              <div class="left-content">
+                <h2>Body-to-Body with Marilyn / Körper-zu-Körper mit Marilyn</h2>
+                <h3>
+                  Maja Kowalczyk, Aleksandra Skotarek
+                  & Kollegen (Polen)
+                </h3>
+                Video-Lecture Performance
+              </div>
+             
+            </div>
+            <hr>
+            <div class="agenda-content agenda-3">
+              <div class="left-content">
+                <h2>Body-to-Body with Marilyn / Körper-zu-Körper mit Marilyn</h2>
+                <h3>
+                  Maja Kowalczyk, Aleksandra Skotarek
+                  & Kollegen (Polen)
+                </h3>
+                Video-Lecture Performance
+              </div>
+              
+            </div>
+            <hr>
+            <div class="agenda-content agenda-4">
+              <div class="left-content">
+                <h2>Body-to-Body with Marilyn / Körper-zu-Körper mit Marilyn</h2>
+                <h3>
+                  Maja Kowalczyk, Aleksandra Skotarek
+                  & Kollegen (Polen)
+                </h3>
+                Video-Lecture Performance
+              </div>
+              
+            </div>
+          </div>
+
+        </div>
       </div>
-     
     </div>
   </div>
 
@@ -105,7 +243,7 @@
 
   <!-- SCRIPTS -->
   <!-- Video.js default JS cdn -->
-  <script src="https://vjs.zencdn.net/7.20.3/video.min.js"></script>
+  <script src="https://vjs.zencdn.net/7.20.3/video.js"></script>
   <!-- VENDOR -->
   <script src="/js/vendor/jquery-1.11.2.min.js"></script>
   <script src="/js/vendor/unslider.js"></script>
@@ -116,7 +254,6 @@
 
   <!-- ZBR -->
   <script src="/js/main.js"></script>
-  <script src="/js/trackSwitch.js"></script>
 </body>
 
 </html>

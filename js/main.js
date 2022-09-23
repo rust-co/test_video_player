@@ -4,7 +4,7 @@ var audioTracks = myPlayer.audioTracks();
 
 var buttonCheck;
  
-const audioLink = 'https://nimble1.zebrastudio.live/out/mainz/playlist.m3u8'
+const audioLink = 'https://edge1.zebrastudio.live/out/mainz/playlist.m3u8'
 const dgsLink = 'https://nimble1.zebrastudio.live/DGS/mainz/playlist.m3u8'
 
 
@@ -16,11 +16,11 @@ var audioChoice = document.getElementsByClassName('audio');
 
 var activeStream = document.getElementsByClassName('activeStream');
 
+var videoHidden = document.getElementById('my-video');
 
+var introVideo = document.getElementById('introVideo');
 
-
-
-
+var agendaElement = document.getElementById('agenda');
 
 
 
@@ -28,25 +28,31 @@ function dgsVideo(event) {
   
     myPlayer.player().src(dgsLink);
     dgs[0].classList.toggle("hidden");
-    audioChoice[0].classList.toggle("hidden");
-    audioChoice[1].classList.toggle("hidden");
-    audioChoice[2].classList.toggle("hidden");
-    audioChoice[3].classList.toggle("hidden");
-    audioChoice[4].classList.toggle("hidden");
-    audioAll[0].classList.toggle("hidden");
+    audioChoice[0].classList.add("hidden");
+    audioChoice[1].classList.add("hidden");
+    audioChoice[2].classList.add("hidden");
+    audioChoice[3].classList.add("hidden");
+    audioChoice[4].classList.add("hidden");
+    audioAll[0].classList.remove("hidden");
+    videoHidden.classList.remove("hidden");
+    introVideo.remove();
+    agendaElement.classList.remove("hidden")
 
 }
 
 function allAudio(event) {
   
   myPlayer.player().src(audioLink);
-  dgs[0].classList.toggle("hidden");
-  audioChoice[0].classList.toggle("hidden");
-  audioChoice[1].classList.toggle("hidden");
-  audioChoice[2].classList.toggle("hidden");
-  audioChoice[3].classList.toggle("hidden");
-  audioChoice[4].classList.toggle("hidden");
-  audioAll[0].classList.toggle("hidden");
+  dgs[0].classList.remove("hidden");
+  audioChoice[0].classList.remove("hidden");
+  audioChoice[1].classList.remove("hidden");
+  audioChoice[2].classList.remove("hidden");
+  audioChoice[3].classList.remove("hidden");
+  audioChoice[4].classList.remove("hidden");
+  audioAll[0].classList.add("hidden");
+  videoHidden.classList.remove("hidden");
+  introVideo.remove();
+  agendaElement.classList.remove("hidden")
 
 
 }
@@ -56,7 +62,7 @@ function allAudio(event) {
 
 function originalAudio(event) {
 
-  audioTracks[3].enabled = true;
+  audioTracks[0].enabled = true;
   originalBtn[0].classList.add("cur");
   englishBtn[0].classList.remove("cur");
   deutschBtn[0].classList.remove("cur");
@@ -76,7 +82,7 @@ function englishAudio(event) {
 
 function deutschAudio(event) {
 
-  audioTracks[0].enabled = true;
+  audioTracks[2].enabled = true;
   originalBtn[0].classList.remove("cur");
   englishBtn[0].classList.remove("cur");
   deutschBtn[0].classList.add("cur");
@@ -86,7 +92,7 @@ function deutschAudio(event) {
 
 function leichteAudio(event) {
 
-  audioTracks[2].enabled = true;
+  audioTracks[3].enabled = true;
   originalBtn[0].classList.remove("cur");
   englishBtn[0].classList.remove("cur");
   deutschBtn[0].classList.remove("cur");
