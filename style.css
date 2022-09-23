@@ -1930,10 +1930,14 @@
 	}
 
 	
-	body.display_sw
 
 	.agenda {
 		background-color: #F3F2F0;
+	}
+	.explainer {
+		background-color: #F3F2F0;
+		height: 200px;
+		padding-top: 50px;
 	}
 	.agenda-wrapper {
 		background-color: #F3F2F0;

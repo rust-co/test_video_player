@@ -4,7 +4,7 @@ var audioTracks = myPlayer.audioTracks();
 
 var buttonCheck;
  
-const audioLink = 'https://edge1.zebrastudio.live/out/mainz/playlist.m3u8'
+const audioLink = 'https://nimble1.zebrastudio.live/out/mainz/playlist.m3u8'
 const dgsLink = 'https://nimble1.zebrastudio.live/DGS/mainz/playlist.m3u8'
 
 
@@ -22,6 +22,8 @@ var introVideo = document.getElementById('introVideo');
 
 var agendaElement = document.getElementById('agenda');
 
+var explainerElement = document.getElementById('explainer');
+
 
 
 function dgsVideo(event) {
@@ -36,7 +38,8 @@ function dgsVideo(event) {
     audioAll[0].classList.remove("hidden");
     videoHidden.classList.remove("hidden");
     introVideo.remove();
-    agendaElement.classList.remove("hidden")
+    agendaElement.classList.remove("hidden");
+    explainerElement.remove();
 
 }
 
@@ -52,8 +55,8 @@ function allAudio(event) {
   audioAll[0].classList.add("hidden");
   videoHidden.classList.remove("hidden");
   introVideo.remove();
-  agendaElement.classList.remove("hidden")
-
+  agendaElement.classList.remove("hidden");
+  explainerElement.remove();
 
 }
 
