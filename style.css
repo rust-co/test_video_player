@@ -1942,6 +1942,22 @@
 	.agenda-wrapper {
 		background-color: #F3F2F0;
 	}
+
+	body.display_sw .explainer{
+		background-color: #fff;
+		-webkit-box-shadow:inset 0px 0px 0px 2px #000;
+		-moz-box-shadow:inset 0px 0px 0px 2px #000;
+		box-shadow:inset 0px 0px 0px 2px #000;
+		color: #000;
+	}
+
+	body.display_ws .explainer {
+		background-color: #000;
+		-webkit-box-shadow:inset 0px 0px 0px 2px #fff;
+		-moz-box-shadow:inset 0px 0px 0px 2px #fff;
+		box-shadow:inset 0px 0px 0px 2px #fff;
+		color: #fff;
+	}
 	.agenda-days {
 		background-color: #F3F2F0;
 		width: 100%;
@@ -2191,3 +2207,19 @@
 
 	}
 
+	.videoWrapper {
+		float: none;
+		clear: both;
+		width: 100%;
+		position: relative;
+		padding-bottom: 56.25%;
+		padding-top: 25px;
+		height: 0;
+	}
+	.videoWrapper iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
