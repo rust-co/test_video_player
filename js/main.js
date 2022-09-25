@@ -4,7 +4,7 @@ var audioTracks = myPlayer.audioTracks();
 
 var buttonCheck;
  
-const audioLink = 'https://nimble1.zebrastudio.live/out/mainz/playlist.m3u8'
+const audioLink = 'https://edge1.zebrastudio.live/out/mainz/playlist.m3u8'
 const dgsLink = 'https://nimble1.zebrastudio.live/DGS/mainz/playlist.m3u8'
 
 
@@ -65,7 +65,7 @@ function allAudio(event) {
 
 function originalAudio(event) {
 
-  audioTracks[0].enabled = true;
+  audioTracks[3].enabled = true;
   originalBtn[0].classList.add("cur");
   englishBtn[0].classList.remove("cur");
   deutschBtn[0].classList.remove("cur");
@@ -85,7 +85,7 @@ function englishAudio(event) {
 
 function deutschAudio(event) {
 
-  audioTracks[2].enabled = true;
+  audioTracks[0].enabled = true;
   originalBtn[0].classList.remove("cur");
   englishBtn[0].classList.remove("cur");
   deutschBtn[0].classList.add("cur");
@@ -95,7 +95,7 @@ function deutschAudio(event) {
 
 function leichteAudio(event) {
 
-  audioTracks[3].enabled = true;
+  audioTracks[2].enabled = true;
   originalBtn[0].classList.remove("cur");
   englishBtn[0].classList.remove("cur");
   deutschBtn[0].classList.remove("cur");

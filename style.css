@@ -236,6 +236,8 @@
 		min-width: 212px;
 		margin: 10px 6px 0 6px;
 		height: auto;
+		visibility: hidden;
+		position: absolute;
 	}
 
 	.logo {
@@ -244,6 +246,7 @@
 		width: 100%;
 		display: inline-block;
 		text-align: center;
+		/* visibility: hidden; */
 	}
 
 	body.display_sw .logo {
@@ -568,7 +571,7 @@
 		margin-bottom: 5px;
 		text-align: center;
 		font-size: 18px;
-		line-height: 25px;
+		/* line-height: 25px; */
 		font-weight: bold;
 	}
 
@@ -1100,12 +1103,36 @@
 	.elements-inside {
 		margin-left: 50px;
 	}
+	/* nav.access li.display ul li {
+		width: auto;
+	} */
 
 
+	/* nav.access li.lang {
+		width: 200px;
+	} */
+
+	/* nav.access li {
+		float: left;
+
+	} */
+
+
+	.explainer {
+
+	}
 	/* ==========================================================================
 	Media Queries
 	========================================================================== */
-	
+	nav.access .display li {
+		width: 25px;
+	}
+	nav.access li.display ul li:first-child {
+		display: block;
+		width: auto;
+	}
+
+
 	@media only screen and (min-width: 750px) {
 		
 		/* --------- General -------*/
@@ -1135,12 +1162,14 @@
 			top: 10px;
 			width: 232px;
 			margin: 0;
+			visibility: visible;
 		}
 		
 		.logo {
 			height: 212px;
 			width: 232px;
 			background: none;
+			/* visibility: visible; */
 		}
 		
 		.logo img {
@@ -1228,7 +1257,7 @@
 		}
 
 		nav.access li.display {
-			width: 505px;
+			width: 233px;
 			margin-right: 0;
 		}
 		
@@ -1414,7 +1443,7 @@
 		}
 
 		nav.access li.display {
-			width: 705px;
+			width: 350px;
 		}
 		
 		nav.access li.display ul li:first-child {
@@ -1575,7 +1604,7 @@
 		}
 		
 		nav.access li.lang {
-			width: 193px;
+			width: 347px;
 		}
 		
 		nav.access li.textsize {
@@ -1936,8 +1965,9 @@
 	}
 	.explainer {
 		background-color: #F3F2F0;
-		height: 200px;
-		padding-top: 50px;
+		/* height: 200px; */
+		/* padding-top: 50px; */
+		padding: 23px;
 	}
 	.agenda-wrapper {
 		background-color: #F3F2F0;
@@ -2222,4 +2252,11 @@
 		left: 0;
 		width: 100%;
 		height: 100%;
+	}
+	.ico-bw,
+	.ico-wb {
+		width: 26px;
+	}
+	.ico-col {
+		width: 21px;
 	}
