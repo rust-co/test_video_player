@@ -30,12 +30,20 @@ function dgsVideo(event) {
   
     myPlayer.player().src(dgsLink);
     dgs[0].classList.toggle("hidden");
+    dgs[1].classList.toggle("hidden");
     audioChoice[0].classList.add("hidden");
     audioChoice[1].classList.add("hidden");
     audioChoice[2].classList.add("hidden");
     audioChoice[3].classList.add("hidden");
     audioChoice[4].classList.add("hidden");
+    audioChoice[5].classList.add("hidden");
+    audioChoice[6].classList.add("hidden");
+    audioChoice[7].classList.add("hidden");
+    audioChoice[8].classList.add("hidden");
+    audioChoice[9].classList.add("hidden");
+
     audioAll[0].classList.remove("hidden");
+    audioAll[1].classList.remove("hidden");
     videoHidden.classList.remove("hidden");
     introVideo.remove();
     agendaElement.classList.remove("hidden");
@@ -47,12 +55,19 @@ function allAudio(event) {
   
   myPlayer.player().src(audioLink);
   dgs[0].classList.remove("hidden");
+  dgs[1].classList.remove("hidden");
   audioChoice[0].classList.remove("hidden");
   audioChoice[1].classList.remove("hidden");
   audioChoice[2].classList.remove("hidden");
   audioChoice[3].classList.remove("hidden");
   audioChoice[4].classList.remove("hidden");
+  audioChoice[5].classList.remove("hidden");
+  audioChoice[6].classList.remove("hidden");
+  audioChoice[7].classList.remove("hidden");
+  audioChoice[8].classList.remove("hidden");
+  audioChoice[9].classList.remove("hidden");
   audioAll[0].classList.add("hidden");
+  audioAll[1].classList.add("hidden");
   videoHidden.classList.remove("hidden");
   introVideo.remove();
   agendaElement.classList.remove("hidden");
@@ -123,22 +138,48 @@ var polskiBtn = document.getElementsByClassName('polski');
 
 
 const originalAudioBtn = document.querySelector('.original');
+const originalAudioBtnBot = document.querySelector('.original-bottom');
+
 const englishAudioBtn = document.querySelector('.english');
+const englishAudioBtnBot = document.querySelector('.english-bottom');
+
 const deutschAudioBtn = document.querySelector('.deutsch');
+const deutschAudioBtnBot = document.querySelector('.deutsch-bottom');
+
 const leichteAudioBtn = document.querySelector('.leicht');
+const leichteAudioBtnBot = document.querySelector('.leicht-bottom');
+
 const polskiAudioBtn = document.querySelector('.polski');
+const polskiAudioBtnBot = document.querySelector('.polski-bottom');
+
+
 const allAudioBtn = document.querySelector('.audioAll');
+const allAudioBtnBot = document.querySelector('.audioAll-bottom');
 
 
 const dgsVideoBtn = document.querySelector('.dgs-link');
+const dgsVideoBtnBot = document.querySelector('.dgs-bottom');
 
 
 
 originalAudioBtn.addEventListener('click', originalAudio);
+originalAudioBtnBot.addEventListener('click', originalAudio);
+
 englishAudioBtn.addEventListener('click', englishAudio);
+englishAudioBtnBot.addEventListener('click', englishAudio);
+
 deutschAudioBtn.addEventListener('click', deutschAudio);
+deutschAudioBtnBot.addEventListener('click', deutschAudio);
+
 leichteAudioBtn.addEventListener('click', leichteAudio);
+leichteAudioBtnBot.addEventListener('click', leichteAudio);
+
 polskiAudioBtn.addEventListener('click', polskiAudio);
+polskiAudioBtnBot.addEventListener('click', polskiAudio);
+
 allAudioBtn.addEventListener('click', allAudio);
+allAudioBtnBot.addEventListener('click', allAudio);
+
 dgsVideoBtn.addEventListener('click', dgsVideo);
+dgsVideoBtnBot.addEventListener('click', dgsVideo);
 

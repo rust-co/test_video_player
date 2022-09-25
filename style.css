@@ -350,11 +350,20 @@
 	====================*/
 
 	nav.main {
-		display: none;
+		/* display: none; */
 		background: #fff;
 		width: 100%;
 		margin: 3px 0 0 0;
 	}
+
+
+	/* nav.main-bottom ul li {
+		display: inline-block;	
+	} */
+
+	/* nav.main-bottom ul li .list-ico {
+		padding-right: 10px;
+	} */
 
 	body.display_ws nav.main {
 		background: #000;
@@ -365,6 +374,11 @@
 		margin: 0;
 		padding: 10px 0;
 	}
+
+
+	nav.main-bottom ul {
+		padding: 10px 20px;
+	} 
 
 	body.display_sw nav.main ul {
 		-webkit-box-shadow:inset 0px 0px 0px 2px #000;
@@ -1118,9 +1132,9 @@
 	} */
 
 
-	.explainer {
+	/* .explainer {
 
-	}
+	} */
 	/* ==========================================================================
 	Media Queries
 	========================================================================== */
@@ -1305,6 +1319,10 @@
 			bottom: 6px;
 			left: 12px;
 		}
+
+		nav.main-bottom {
+			display: none;
+		}
 		
 		/* -----------   Home Teaser  ---------*/
 		
@@ -1447,7 +1465,7 @@
 		}
 		
 		nav.access li.display ul li:first-child {
-			padding: 10px 20px 10px 78px;
+			padding: 10px 20px 10px 20px;
 		}
 		
 		nav.access li.display ul li a {
