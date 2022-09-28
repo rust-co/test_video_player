@@ -2278,3 +2278,8 @@
 	.ico-col {
 		width: 21px;
 	}
+
+
+	.vjs-subs-caps-button{
+		visibility: hidden !important;
+	}
