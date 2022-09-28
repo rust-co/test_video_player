@@ -38,10 +38,7 @@ var introVideo = document.getElementById('introVideo');
 var menuSafari = document.getElementById('menu-safari');
 
 
-if (safariAgent) {
-  // audioTracks[0].enabled = true;
-  menuSafari.remove();
-}
+
 
 var agendaElement = document.getElementById('agenda');
 
@@ -214,3 +211,9 @@ allAudioBtnBot.addEventListener('click', allAudio);
 
 dgsVideoBtn.addEventListener('click', dgsVideo);
 dgsVideoBtnBot.addEventListener('click', dgsVideo);
+
+
+if (safariAgent) {
+  // audioTracks[0].enabled = true;
+  menuSafari.remove();
+}
