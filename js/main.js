@@ -16,6 +16,8 @@ if ((chromeAgent) && (safariAgent)) safariAgent = false;
 
 
 
+
+
 var buttonCheck;
 
 const audioLink = 'https://edge1.zebrastudio.live/out/mainz/playlist.m3u8'
@@ -33,6 +35,13 @@ var activeStream = document.getElementsByClassName('activeStream');
 var videoHidden = document.getElementById('my-video');
 
 var introVideo = document.getElementById('introVideo');
+var menuSafari = document.getElementById('menu-safari');
+
+
+if (safariAgent) {
+  // audioTracks[0].enabled = true;
+  menuSafari.remove();
+}
 
 var agendaElement = document.getElementById('agenda');
 
@@ -94,12 +103,9 @@ function allAudio(event) {
 
 function originalAudio(event) {
 
-  if (safariAgent) {
-    audioTracks[0].enabled = true;
 
-  } else {
-    audioTracks[3].enabled = true;
-  }
+  audioTracks[3].enabled = true;
+
   originalBtn[0].classList.add("cur");
   englishBtn[0].classList.remove("cur");
   deutschBtn[0].classList.remove("cur");
@@ -111,13 +117,9 @@ function originalAudio(event) {
 
 function englishAudio(event) {
 
-  if (safariAgent) {
-    audioTracks[4].enabled = true;
 
+  audioTracks[1].enabled = true;
 
-  } else {
-    audioTracks[1].enabled = true;
-  }
   originalBtn[0].classList.remove("cur");
   englishBtn[0].classList.add("cur");
   deutschBtn[0].classList.remove("cur");
@@ -127,13 +129,7 @@ function englishAudio(event) {
 }
 
 function deutschAudio(event) {
-  if (safariAgent) {
-    audioTracks[3].enabled = true;
 
-
-  } else {
-    audioTracks[0].enabled = true;
-  }
   originalBtn[0].classList.remove("cur");
   englishBtn[0].classList.remove("cur");
   deutschBtn[0].classList.add("cur");
@@ -142,13 +138,9 @@ function deutschAudio(event) {
 }
 
 function leichteAudio(event) {
-  if (safariAgent) {
-    audioTracks[2].enabled = true;
 
+  audioTracks[2].enabled = true;
 
-  } else {
-    audioTracks[2].enabled = true;
-  }
   originalBtn[0].classList.remove("cur");
   englishBtn[0].classList.remove("cur");
   deutschBtn[0].classList.remove("cur");
@@ -157,13 +149,8 @@ function leichteAudio(event) {
 }
 
 function polskiAudio(event) {
-  if (safariAgent) {
-    audioTracks[1].enabled = true;
+  audioTracks[4].enabled = true;
 
-
-  } else {
-    audioTracks[4].enabled = true;
-  }
   originalBtn[0].classList.remove("cur");
   englishBtn[0].classList.remove("cur");
   deutschBtn[0].classList.remove("cur");
@@ -206,6 +193,7 @@ const dgsVideoBtnBot = document.querySelector('.dgs-bottom');
 
 
 
+
 originalAudioBtn.addEventListener('click', originalAudio);
 originalAudioBtnBot.addEventListener('click', originalAudio);
 
@@ -226,4 +214,3 @@ allAudioBtnBot.addEventListener('click', allAudio);
 
 dgsVideoBtn.addEventListener('click', dgsVideo);
 dgsVideoBtnBot.addEventListener('click', dgsVideo);
-
