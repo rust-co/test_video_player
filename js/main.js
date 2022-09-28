@@ -1,9 +1,23 @@
 var myPlayer = videojs('my-video');
 var audioTracks = myPlayer.audioTracks();
 
+// Get the user-agent string
+let userAgentString =
+  navigator.userAgent;
+
+// Detect Chrome
+let chromeAgent = userAgentString.indexOf("Chrome") > -1;
+
+// Detect Safari
+let safariAgent = userAgentString.indexOf("Safari") > -1;
+
+// Discard Safari since it also matches Chrome
+if ((chromeAgent) && (safariAgent)) safariAgent = false;
+
+
 
 var buttonCheck;
- 
+
 const audioLink = 'https://edge1.zebrastudio.live/out/mainz/playlist.m3u8'
 const dgsLink = 'https://nimble1.zebrastudio.live/DGS/mainz/playlist.m3u8'
 
@@ -27,32 +41,32 @@ var explainerElement = document.getElementById('explainer');
 
 
 function dgsVideo(event) {
-  
-    myPlayer.player().src(dgsLink);
-    dgs[0].classList.toggle("hidden");
-    dgs[1].classList.toggle("hidden");
-    audioChoice[0].classList.add("hidden");
-    audioChoice[1].classList.add("hidden");
-    audioChoice[2].classList.add("hidden");
-    audioChoice[3].classList.add("hidden");
-    audioChoice[4].classList.add("hidden");
-    audioChoice[5].classList.add("hidden");
-    audioChoice[6].classList.add("hidden");
-    audioChoice[7].classList.add("hidden");
-    audioChoice[8].classList.add("hidden");
-    audioChoice[9].classList.add("hidden");
 
-    audioAll[0].classList.remove("hidden");
-    audioAll[1].classList.remove("hidden");
-    videoHidden.classList.remove("hidden");
-    introVideo.remove();
-    agendaElement.classList.remove("hidden");
-    explainerElement.remove();
+  myPlayer.player().src(dgsLink);
+  dgs[0].classList.toggle("hidden");
+  dgs[1].classList.toggle("hidden");
+  audioChoice[0].classList.add("hidden");
+  audioChoice[1].classList.add("hidden");
+  audioChoice[2].classList.add("hidden");
+  audioChoice[3].classList.add("hidden");
+  audioChoice[4].classList.add("hidden");
+  audioChoice[5].classList.add("hidden");
+  audioChoice[6].classList.add("hidden");
+  audioChoice[7].classList.add("hidden");
+  audioChoice[8].classList.add("hidden");
+  audioChoice[9].classList.add("hidden");
+
+  audioAll[0].classList.remove("hidden");
+  audioAll[1].classList.remove("hidden");
+  videoHidden.classList.remove("hidden");
+  introVideo.remove();
+  agendaElement.classList.remove("hidden");
+  explainerElement.remove();
 
 }
 
 function allAudio(event) {
-  
+
   myPlayer.player().src(audioLink);
   dgs[0].classList.remove("hidden");
   dgs[1].classList.remove("hidden");
@@ -80,27 +94,46 @@ function allAudio(event) {
 
 function originalAudio(event) {
 
-  audioTracks[3].enabled = true;
+  if (safariAgent) {
+    audioTracks[0].enabled = true;
+
+  } else {
+    audioTracks[3].enabled = true;
+  }
   originalBtn[0].classList.add("cur");
   englishBtn[0].classList.remove("cur");
   deutschBtn[0].classList.remove("cur");
   leichteBtn[0].classList.remove("cur");
   polskiBtn[0].classList.remove("cur");
+
+
 }
 
 function englishAudio(event) {
 
-  audioTracks[1].enabled = true;
+  if (safariAgent) {
+    audioTracks[4].enabled = true;
+
+
+  } else {
+    audioTracks[1].enabled = true;
+  }
   originalBtn[0].classList.remove("cur");
   englishBtn[0].classList.add("cur");
   deutschBtn[0].classList.remove("cur");
   leichteBtn[0].classList.remove("cur");
   polskiBtn[0].classList.remove("cur");
+
 }
 
 function deutschAudio(event) {
+  if (safariAgent) {
+    audioTracks[3].enabled = true;
 
-  audioTracks[0].enabled = true;
+
+  } else {
+    audioTracks[0].enabled = true;
+  }
   originalBtn[0].classList.remove("cur");
   englishBtn[0].classList.remove("cur");
   deutschBtn[0].classList.add("cur");
@@ -109,8 +142,13 @@ function deutschAudio(event) {
 }
 
 function leichteAudio(event) {
+  if (safariAgent) {
+    audioTracks[2].enabled = true;
 
-  audioTracks[2].enabled = true;
+
+  } else {
+    audioTracks[2].enabled = true;
+  }
   originalBtn[0].classList.remove("cur");
   englishBtn[0].classList.remove("cur");
   deutschBtn[0].classList.remove("cur");
@@ -119,13 +157,19 @@ function leichteAudio(event) {
 }
 
 function polskiAudio(event) {
+  if (safariAgent) {
+    audioTracks[1].enabled = true;
 
-  audioTracks[4].enabled = true;
+
+  } else {
+    audioTracks[4].enabled = true;
+  }
   originalBtn[0].classList.remove("cur");
   englishBtn[0].classList.remove("cur");
   deutschBtn[0].classList.remove("cur");
   leichteBtn[0].classList.remove("cur");
   polskiBtn[0].classList.add("cur");
+
 }
 
 var audioAll = document.getElementsByClassName('audioAll');
