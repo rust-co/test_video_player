@@ -214,6 +214,5 @@ dgsVideoBtnBot.addEventListener('click', dgsVideo);
 
 
 if (safariAgent) {
-  // audioTracks[0].enabled = true;
-  menuSafari.remove();
-}
+  menuSafari.classList.add("hidden");
+};
