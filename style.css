@@ -2255,7 +2255,7 @@
 
 	}
 
-	/* .videoWrapper {
+	.videoWrapper {
 		float: none;
 		clear: both;
 		width: 100%;
@@ -2270,7 +2270,7 @@
 		left: 0;
 		width: 100%;
 		height: 100%;
-	} */
+	}
 	.ico-bw,
 	.ico-wb {
 		width: 26px;
