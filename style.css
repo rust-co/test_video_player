@@ -236,14 +236,17 @@
 		min-width: 212px;
 		margin: 10px 6px 0 6px;
 		height: auto;
+		visibility: hidden;
+		position: absolute;
 	}
 
 	.logo {
-		background: #000;
+		/* background: #000; */
 		height: 216px;
 		width: 100%;
 		display: inline-block;
 		text-align: center;
+		/* visibility: hidden; */
 	}
 
 	body.display_sw .logo {
@@ -347,11 +350,20 @@
 	====================*/
 
 	nav.main {
-		display: none;
+		/* display: none; */
 		background: #fff;
 		width: 100%;
 		margin: 3px 0 0 0;
 	}
+
+
+	/* nav.main-bottom ul li {
+		display: inline-block;	
+	} */
+
+	/* nav.main-bottom ul li .list-ico {
+		padding-right: 10px;
+	} */
 
 	body.display_ws nav.main {
 		background: #000;
@@ -362,6 +374,11 @@
 		margin: 0;
 		padding: 10px 0;
 	}
+
+
+	nav.main-bottom ul {
+		padding: 10px 20px;
+	} 
 
 	body.display_sw nav.main ul {
 		-webkit-box-shadow:inset 0px 0px 0px 2px #000;
@@ -568,7 +585,7 @@
 		margin-bottom: 5px;
 		text-align: center;
 		font-size: 18px;
-		line-height: 25px;
+		/* line-height: 25px; */
 		font-weight: bold;
 	}
 
@@ -927,7 +944,7 @@
 
 	td {
 		display: block;
-		vertical-align: top;
+		/* vertical-align: top; */
 	}
 
 	td.title {
@@ -1091,10 +1108,45 @@
 		text-decoration: none !important;
 	}
 
+
+	nav.agenda-days ul { 
+		list-style: none;
+		padding: 0;
+		margin: 10px 0 5px 50px;
+	}
+	.elements-inside {
+		margin-left: 50px;
+	}
+	/* nav.access li.display ul li {
+		width: auto;
+	} */
+
+
+	/* nav.access li.lang {
+		width: 200px;
+	} */
+
+	/* nav.access li {
+		float: left;
+
+	} */
+
+
+	/* .explainer {
+
+	} */
 	/* ==========================================================================
 	Media Queries
 	========================================================================== */
-	
+	nav.access .display li {
+		width: 25px;
+	}
+	nav.access li.display ul li:first-child {
+		display: block;
+		width: auto;
+	}
+
+
 	@media only screen and (min-width: 750px) {
 		
 		/* --------- General -------*/
@@ -1124,12 +1176,14 @@
 			top: 10px;
 			width: 232px;
 			margin: 0;
+			visibility: visible;
 		}
 		
 		.logo {
 			height: 212px;
 			width: 232px;
 			background: none;
+			/* visibility: visible; */
 		}
 		
 		.logo img {
@@ -1217,7 +1271,7 @@
 		}
 
 		nav.access li.display {
-			width: 505px;
+			width: 233px;
 			margin-right: 0;
 		}
 		
@@ -1235,7 +1289,7 @@
 		}
 		
 		.accessible_info {
-			margin: -7px 0 10px 0;
+			margin: 100px 0 10px 0;
 		}
 		
 		/* --------- Slider ----------*/
@@ -1264,6 +1318,10 @@
 			position: absolute;
 			bottom: 6px;
 			left: 12px;
+		}
+
+		nav.main-bottom {
+			display: none;
 		}
 		
 		/* -----------   Home Teaser  ---------*/
@@ -1368,6 +1426,13 @@
 		div.container_play h2 {
 			width: 400px;
 		}
+		nav.agenda-days ul { 
+			margin: 10px 0 5px 0;
+		}
+		.elements-inside {
+			margin-left: 00px;
+		}
+	
 		
 	}
 
@@ -1396,11 +1461,11 @@
 		}
 
 		nav.access li.display {
-			width: 705px;
+			width: 350px;
 		}
 		
 		nav.access li.display ul li:first-child {
-			padding: 10px 20px 10px 78px;
+			padding: 10px 20px 10px 20px;
 		}
 		
 		nav.access li.display ul li a {
@@ -1515,6 +1580,9 @@
 			margin-bottom: 25px;
 			width: 100%;
 		}
+		/* nav.agenda-days ul { 
+			padding: 0;
+		} */
 		
 		
 	}
@@ -1554,7 +1622,7 @@
 		}
 		
 		nav.access li.lang {
-			width: 193px;
+			width: 347px;
 		}
 		
 		nav.access li.textsize {
@@ -1580,7 +1648,7 @@
 		
 		.accessible_info {
 			width: calc(100% - 20px);
-			margin: -12px 0 20px 0 !important;
+			margin: 70px 0 20px 0 !important;
 		}
 		
 		/* -----------   Home Slider  ---------*/
@@ -1855,19 +1923,7 @@
 			padding: 0 0 18px 0;
 	}
 
-	@media only screen and (min-width: 750px) {
-
-		img.partner {
-			display: unset;
-			vertical-align: middle;
-			margin: 0 50px 0 0;
-			padding: 20px 0;
-		}
 	
-		p.partner {
-			text-align: left;
-		}
-	}
 
 
 
@@ -1911,24 +1967,44 @@
 	.agenda-header {
 		height: 50px;
 		background-color: #8A9EA9;
-		/* vertical-align: middle; */
 		font-weight: 700;
-		/* padding-top: px; */
 		
 	}
 	.elements-inside {
 		/* margin: 25px auto; */
 		padding-top: 10px;
+		
 	}
 
 	
-	body.display_sw
 
 	.agenda {
 		background-color: #F3F2F0;
 	}
+	.explainer {
+		background-color: #F3F2F0;
+		/* height: 200px; */
+		/* padding-top: 50px; */
+		padding: 23px;
+	}
 	.agenda-wrapper {
 		background-color: #F3F2F0;
+	}
+
+	body.display_sw .explainer{
+		background-color: #fff;
+		-webkit-box-shadow:inset 0px 0px 0px 2px #000;
+		-moz-box-shadow:inset 0px 0px 0px 2px #000;
+		box-shadow:inset 0px 0px 0px 2px #000;
+		color: #000;
+	}
+
+	body.display_ws .explainer {
+		background-color: #000;
+		-webkit-box-shadow:inset 0px 0px 0px 2px #fff;
+		-moz-box-shadow:inset 0px 0px 0px 2px #fff;
+		box-shadow:inset 0px 0px 0px 2px #fff;
+		color: #fff;
 	}
 	.agenda-days {
 		background-color: #F3F2F0;
@@ -1939,14 +2015,10 @@
 		display: inline-block;
 		/* width: 100%; */
 		margin: 0;
-		padding: 0;
+		/* padding: 0; */
 	}
 
-	nav.agenda-days ul { 
-		list-style: none;
-		padding: 0;
-		margin: 10px 0 5px 0;
-	}
+
 
 	nav.agenda-days li {
 		display: inline-block;
@@ -2158,4 +2230,56 @@
 	}
 	.intro-card h2 {
 		padding: 82px;
+	}
+
+	body.display_ws .agenda img {
+		filter: invert();
+	
+	}
+
+	.vjs-big-play-centered .vjs-big-play-button{
+		color: red;
+	}
+	
+	.vjs-big-play-centered .vjs-big-play-button:hover{
+		color: white;
+	}
+
+	.video-js .vjs-big-play-button {
+		border: 0.06666em solid white;
+		border-radius: 1em;
+	}
+
+	.video-js:hover .vjs-big-play-button {
+		border: 0.06666em solid red;
+
+	}
+
+	.videoWrapper {
+		float: none;
+		clear: both;
+		width: 100%;
+		position: relative;
+		padding-bottom: 56.25%;
+		padding-top: 25px;
+		height: 0;
+	}
+	.videoWrapper iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+	.ico-bw,
+	.ico-wb {
+		width: 26px;
+	}
+	.ico-col {
+		width: 21px;
+	}
+
+
+	.vjs-subs-caps-button{
+		visibility: hidden !important;
 	}
