@@ -127,6 +127,7 @@ function englishAudio(event) {
 
 function deutschAudio(event) {
 
+  audioTracks[0].enabled = true;
   originalBtn[0].classList.remove("cur");
   englishBtn[0].classList.remove("cur");
   deutschBtn[0].classList.add("cur");
